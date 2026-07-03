@@ -1,0 +1,160 @@
+/* =========================================
+   ABOUT PAGE SPECIFIC STYLES (about.css)
+========================================= */
+
+/* --- Grid Layout Container --- */
+.about-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 60px; /* Reduced top margin so the header fits perfectly */
+    padding: 0 50px 0 120px; /* Clears your fixed icon-sidebar */
+    display: grid;
+    /* This makes the grid automatically collapse into one column when zoomed in! */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 40px;
+    align-items: start; 
+}
+
+/* --- Typography --- */
+.section-title {
+    color: #00E5FF; /* Cyan Accent */
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    
+    /* This creates the perfectly centered line */
+    padding-bottom: 15px; /* Space ABOVE the line */
+    border-bottom: 1px solid rgba(0, 229, 255, 0.4); /* Cyan glowing line */
+    margin-bottom: 15px; /* Space BELOW the line */
+}
+
+.block-title {
+    color: #F8FAFC;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-family: "Montserrat", sans-serif;
+    
+    /* This creates the perfectly centered line */
+    padding-bottom: 12px; /* Space ABOVE the line */
+    border-bottom: 1px solid rgba(56, 189, 248, 0.4); /* Sky Blue glowing line */
+    margin-bottom: 12px; /* Space BELOW the line */
+}
+
+.role {
+    color: #00E5FF;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.description {
+    font-family: "Saira Stencil", sans-serif;
+    line-height: 1.6;
+    color: #CBD5E1; /* Muted Slate Text */
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+/* --- Intro & Skills Styling --- */
+.intro-block, .skills-block {
+    padding-top: 10px; 
+}
+
+/* Download CV Button (Inherits from .dbtn logic) */
+.btn-download {
+    display: inline-block;
+    border-radius: 25px;
+    margin-top: 10px;
+    padding: 10px 25px;
+    background-color: #38BDF8; /* Sky Blue Accent */
+    color: #0F172A; /* Deep Dark Text */
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #00E5FF; 
+    transform: translateY(-4px); 
+    box-shadow: 0 10px 20px rgba(0, 229, 255, 0.3); 
+}
+
+/* --- Skills Tags --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tag {
+    background-color: #1E293B; 
+    border: 1px solid rgba(0, 229, 255, 0.2);
+    color: #00E5FF;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    font-family: "Montserrat", sans-serif;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background-color: rgba(0, 229, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+    color: #F8FAFC;
+}
+
+/* --- Education List --- */
+.institution {
+    display: block;
+    font-size: 0.85rem;
+    color: #38BDF8; 
+    margin-bottom: 12px;
+    font-style: italic;
+    font-family: "Montserrat", sans-serif;
+}
+
+.subject-list {
+    list-style-type: none; 
+    padding-left: 5px;
+    color: #CBD5E1;
+    font-family: "Saira Stencil", sans-serif;
+    font-size: 15px;
+}
+
+.subject-list li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.subject-list li::before {
+    content: "▹"; /* Custom Cyan Bullet */
+    color: #00E5FF;
+    position: absolute;
+    left: 0;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 1024px) {
+    .about-container {
+        padding: 0 40px 0 100px; /* Preserve sidebar clearance on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 20px 0 90px;
+        grid-template-columns: 1fr; /* Forces single column on tiny mobile screens */
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
