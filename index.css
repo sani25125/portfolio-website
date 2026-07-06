@@ -191,75 +191,101 @@ a.active {
 a.dbtn {
     text-decoration: none;
 }
+
 @media (max-width: 768px) {
     
     /* Top Navbar */
     .navigation {
-        width: 92%;
+        width: 92%; 
         padding: 10px 5px;
         gap: 5px;
         justify-content: space-around;
-        top: 15px;
+        top: 80px;
     }
     
     .navigation a {
         padding: 6px 10px;
-        font-size: 13px;
+        font-size: 13px; 
     }
 
-    /* Sidebar (Move it to the bottom as a sticky footer) */
+    /* 2. Fix the Sidebar (Move it to the bottom as a sticky footer) */
     .icon-sidebar {
         top: auto;
         bottom: 0;
         left: 0;
         width: 100%;
         height: auto;
-        border-radius: 20px 20px 0 0;
-        flex-direction: row;
+        border-radius: 20px 20px 0 0; 
+        flex-direction: row; 
         justify-content: center;
         padding: 15px 0;
-        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
-        transform: none;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4); 
+        transform: none; 
         z-index: 1000;
     }
     
     .icon-sidebar ul {
         flex-direction: row;
-        gap: 35px;
+        gap: 35px; 
     }
 
-    /* 3. Fix the Squished Content (Remove the 120px left padding) */
-    /* Using !important ensures this overrides your desktop settings */
-    .info-content, 
+    /* 3. Standard Spacing for About, Projects, and Contact */
     .about-container, 
     .projects-container, 
     .contact-container {
         padding: 100px 20px 80px 20px !important; 
     }
 
-    /* Home Page Layout */
+    /* ==============================================
+       4. HOME PAGE SPECIFIC MOBILE LAYOUT 
+    ============================================== */
+    
     .info-content {
-        flex-direction: column;
-        text-align: center;
-        margin-top: 40px;
+        /* Flips the HTML order: puts the photo on top of the text */
+        flex-direction: column-reverse !important; 
+        
+        /* The Navbar takes up ~60px of vertical space. 
+           Setting padding-top to 90px leaves exactly 30px of breathing room! */
+        padding: 90px 20px 100px 20px !important; 
+        margin-top: 0 !important;
+        
+        gap: 30px; /* Space between the photo and the text */
+        align-items: center; 
     }
     
-    .info .photo {
-        margin-top: 40px;
-        width: 280px;
-        height: 280px;
+    /* The Round, Screen-Filling Photo */
+    .info-content .photo {
+        /* 85vw means it takes up 85% of the phone's width, creating perfect side margins */
+        width: 85vw !important; 
+        height: 85vw !important; /* Keeps it a perfect circle */
+        
+        /* These max sizes prevent it from getting too huge on tablets */
+        max-width: 300px; 
+        max-height: 300px;
+        
+        margin: 0 auto !important; /* Centers the image */
+    }
+    
+    /* Center the Text and the Contact Button */
+    .info-content .info {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Puts the Contact Me button directly in the middle */
     }
     
     #name {
-        font-size: 2.2rem;
+        font-size: 2.2rem; 
     }
 
     .saira-stencil-text {
-        max-width: 100%;
+        max-width: 100%; 
+        margin: 0 10px; /* Adds the left and right margins to your text block */
     }
 }
 
-
+/* Extra tweak for extremely narrow phones */
 @media (max-width: 400px) {
     .navigation a {
         padding: 5px 6px;
