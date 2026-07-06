@@ -201,6 +201,7 @@ a.dbtn {
         gap: 5px;
         justify-content: space-around;
         top: 80px;
+        position: absolute;
     }
     
     .navigation a {
@@ -232,7 +233,7 @@ a.dbtn {
     .about-container, 
     .projects-container, 
     .contact-container {
-        padding: 100px 20px 80px 20px !important; 
+        padding: 50px 20px 80px 20px !important;
     }
 
     /* HOME PAGE MOBILE LAYOUT */
