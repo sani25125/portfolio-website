@@ -1,13 +1,9 @@
-/* =========================================
-   PROJECTS PAGE STYLES (projects.css)
-========================================= */
-
 /* --- Main Layout Container --- */
 .projects-container {
     width: 100%;
     max-width: 1050px;
-    margin: 35px auto 60px; /* Pushes content down so it clears your sticky navbar */
-    padding: 0 50px 0 120px; /* Clears your left icon-sidebar */
+    margin: 25px auto 60px;
+    padding: 0 50px 0 120px;
 }
 
 /* --- Page Title Styling --- */
@@ -23,36 +19,34 @@
     text-align: center;
 }
 
-/* --- The Magic CSS Grid --- */
+/* --- CSS Grid --- */
 .projects-grid {
     display: grid;
-    /* This rule says: create 3 equal columns (1fr). The gap handles the spacing evenly! */
     grid-template-columns: repeat(3, 1fr); 
-    gap: 50px; /* The space between the cards */
+    gap: 50px;
 }
 
 /* --- Individual Card Styling --- */
 .project-card {
-    background-color: #1E293B; /* Matches your navbar surface color */
+    background-color: #1E293B;
     border-radius: 15px;
-    overflow: hidden; /* Ensures the image doesn't break out of the rounded corners */
+    overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: all 0.3s ease; /* Smooth hover animation */
+    transition: all 0.3s ease;
     display: flex;
-    flex-direction: column; /* Pushes the links to the bottom */
+    flex-direction: column;
 }
 
 /* Lift effect on hover */
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-    border-color: rgba(0, 229, 255, 0.3); /* Subtle cyan border glow */
+    border-color: rgba(0, 229, 255, 0.3);
 }
 
 /* --- Image Placeholder Styling --- */
 .card-image-placeholder {
     width: 100%;
-    /* Aggressively reduced from 160px to 130px */
     height: 130px; 
     background-color: #0F172A; 
     display: flex;
@@ -60,7 +54,7 @@
     align-items: center;
     justify-content: center;
     color: #38BDF8; 
-    font-size: 1.5rem; /* Slightly smaller icon */
+    font-size: 1.5rem;
     border-bottom: 2px solid rgba(0, 229, 255, 0.1);
 }
 
@@ -73,7 +67,6 @@
 
 /* --- Card Text Content --- */
 .card-content {
-    /* Reduced top/bottom padding to 15px, kept left/right at 20px */
     padding: 15px 20px; 
     display: flex;
     flex-direction: column;
@@ -82,11 +75,11 @@
 
 .project-category {
     font-family: "Montserrat", sans-serif;
-    font-size: 0.75rem; /* Scaled down */
+    font-size: 0.75rem;
     color: #38BDF8; 
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 4px; /* Reduced margin */
+    margin-bottom: 4px;
     font-weight: 600;
 }
 
@@ -100,13 +93,11 @@
 .project-description {
     font-family: "Saira Stencil", sans-serif;
     color: #CBD5E1; 
-    line-height: 1.4; /* Tighter line spacing */
-    font-size: 12px; /* Scaled down */
-    margin-bottom: 15px; /* Reduced margin */
-    
-    /* PRO-TIP: This prevents the card from growing by locking text to 3 lines */
+    line-height: 1.4;
+    font-size: 12px;
+    margin-bottom: 15px;
     display: -webkit-box;
-    -webkit-line-clamp: 3; 
+    -webkit-line-clamp: 4; 
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -116,8 +107,8 @@
     display: flex;
     gap: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 12px; /* Reduced from 15px */
-    margin-top: auto; /* Pushes the links to the absolute bottom perfectly */
+    padding-top: 12px;
+    margin-top: auto;
 }
 
 .card-links a {
@@ -132,7 +123,6 @@
     gap: 6px;
 }
 
-/* Links turn bright Cyan on hover */
 .card-links a:hover {
     color: #00E5FF; 
 }

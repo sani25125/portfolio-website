@@ -1,15 +1,10 @@
-/* =========================================
-   ABOUT PAGE SPECIFIC STYLES (about.css)
-========================================= */
-
 /* --- Grid Layout Container --- */
 .about-container {
     width: 100%;
     max-width: 1200px;
-    margin: 20px auto 60px; /* Reduced top margin so the header fits perfectly */
-    padding: 0 50px 0 120px; /* Clears your fixed icon-sidebar */
+    margin: 20px auto 60px;
+    padding: 0 50px 0 120px;
     display: grid;
-    /* This makes the grid automatically collapse into one column when zoomed in! */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
     gap: 40px;
     align-items: start; 
@@ -22,11 +17,9 @@
     letter-spacing: 2px;
     font-weight: 700;
     font-family: "Montserrat", sans-serif;
-    
-    /* This creates the perfectly centered line */
-    padding-bottom: 15px; /* Space ABOVE the line */
-    border-bottom: 1px solid rgba(0, 229, 255, 0.4); /* Cyan glowing line */
-    margin-bottom: 15px; /* Space BELOW the line */
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 229, 255, 0.4);
+    margin-bottom: 15px;
 }
 
 .block-title {
@@ -34,9 +27,7 @@
     font-size: 1.2rem;
     letter-spacing: 1px;
     font-family: "Montserrat", sans-serif;
-    
-    /* This creates the perfectly centered line */
-    padding-bottom: 12px; /* Space ABOVE the line */
+    padding-bottom: 12px;
     border-bottom: 1px solid rgba(56, 189, 248, 0.4); /* Sky Blue glowing line */
     margin-bottom: 12px; /* Space BELOW the line */
 }

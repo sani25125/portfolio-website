@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact_Page</title>
+    <title>Contact - Sani Radadiya</title>
+    
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css"> <!-- New Contact CSS -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira+Stencil:ital@1&display=swap" rel="stylesheet">
@@ -12,6 +15,7 @@
 </head>
 <body>
     <div class="outerbox">
+        
         <header class="header">
             <div class="logo">
                 <h2>Port<span>folio</span></h2>
@@ -21,9 +25,10 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html" class="active">Contact</a> <!-- Active class moved here -->
             </nav>
         </header>
+
         <main class="main-content">
             <div class="icon-sidebar">
                 <ul>
@@ -33,6 +38,37 @@
                     <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
                 </ul>
             </div>
+
+            <!-- CONTACT CONTENT -->
+            <div class="contact-container">
+                
+                <h1 class="page-title">Contact Me</h1>
+                <p class="contact-subtitle">
+                    I am currently looking for new opportunities and collaborations. In the web development. </p>
+
+                <div class="contact-grid">
+                    
+                    <!-- Email Block -->
+                    <div class="contact-card">
+                        <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="info-details">
+                            <h4>Email</h4>
+                            <a href="mailto:saniradadiya2525@gmail.com">saniradadiya2525@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <!-- WhatsApp Block -->
+                    <div class="contact-card">
+                        <div class="icon-box"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="info-details">
+                            <h4>WhatsApp</h4>
+                            <a href="#">+91 88493 48577</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </main>
     </div>
 </body>
