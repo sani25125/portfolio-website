@@ -208,7 +208,7 @@ a.dbtn {
         font-size: 13px; 
     }
 
-    /* 2. Fix the Sidebar (Move it to the bottom as a sticky footer) */
+    /* Sidebar */
     .icon-sidebar {
         top: auto;
         bottom: 0;
@@ -229,50 +229,36 @@ a.dbtn {
         gap: 35px; 
     }
 
-    /* 3. Standard Spacing for About, Projects, and Contact */
     .about-container, 
     .projects-container, 
     .contact-container {
         padding: 100px 20px 80px 20px !important; 
     }
 
-    /* ==============================================
-       4. HOME PAGE SPECIFIC MOBILE LAYOUT 
-    ============================================== */
+    /* HOME PAGE MOBILE LAYOUT */
     
     .info-content {
-        /* Flips the HTML order: puts the photo on top of the text */
         flex-direction: column-reverse !important; 
-        
-        /* The Navbar takes up ~60px of vertical space. 
-           Setting padding-top to 90px leaves exactly 30px of breathing room! */
         padding: 90px 20px 100px 20px !important; 
         margin-top: 0 !important;
-        
-        gap: 30px; /* Space between the photo and the text */
+        gap: 30px;
         align-items: center; 
     }
     
-    /* The Round, Screen-Filling Photo */
     .info-content .photo {
-        /* 85vw means it takes up 85% of the phone's width, creating perfect side margins */
         width: 85vw !important; 
-        height: 85vw !important; /* Keeps it a perfect circle */
-        
-        /* These max sizes prevent it from getting too huge on tablets */
+        height: 85vw !important;
         max-width: 300px; 
         max-height: 300px;
-        
         margin: 0 auto !important; /* Centers the image */
     }
-    
-    /* Center the Text and the Contact Button */
+
     .info-content .info {
         text-align: center;
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Puts the Contact Me button directly in the middle */
+        align-items: center;
     }
     
     #name {
@@ -281,11 +267,10 @@ a.dbtn {
 
     .saira-stencil-text {
         max-width: 100%; 
-        margin: 0 10px; /* Adds the left and right margins to your text block */
+        margin: 0 10px;
     }
 }
 
-/* Extra tweak for extremely narrow phones */
 @media (max-width: 400px) {
     .navigation a {
         padding: 5px 6px;
